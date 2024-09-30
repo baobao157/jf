@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计费系统</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>计费系统</h1>
+    
+    <h2>添加成员</h2>
+    <form id="memberForm">
+        <input type="text" id="name" placeholder="成员姓名" required>
+        <button type="submit">添加成员</button>
+    </form>
+    <ul id="memberList"></ul>
+
+    <h2>输入总金额和消费用途</h2>
+    <form id="billingForm">
+        <input type="number" id="totalAmount" placeholder="总金额" required>
+        <input type="text" id="expensePurpose" placeholder="消费用途" required>
+        <input type="text" id="payer" placeholder="付款人姓名" required>
+        <button type="submit">计算费用</button>
+    </form>
+    <ul id="costList"></ul>
+
+    <button id="saveRecords" style="display:none;">保存记录</button>
+
+    <h2>查看记录</h2>
+    <button id="toggleRecords">打开查看记录</button>
+    <ul id="totalCostList" style="display:none;"></ul>
+
+    <h2>删除记录</h2>
+    <input type="number" id="recordIndex" placeholder="记录索引" required>
+    <input type="text" id="confirmDelete" placeholder="输入'删除'确认" required>
+    <button id="deleteRecord">删除记录</button>
+
+    <h2>查看某个成员总金额</h2>
+    <input type="text" id="memberToCheck" placeholder="输入成员姓名">
+    <button id="checkTotal">查看总金额</button>
+    <div id="totalAmountDisplay"></div>
+
+    <h2>查看支付给付款人的总金额</h2>
+    <button id="togglePayerTotal">打开查看付款人总金额</button>
+    <ul id="payerTotalList" style="display:none;"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
